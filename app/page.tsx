@@ -15,6 +15,7 @@ import {
   Sparkles,
   Stethoscope,
 } from "lucide-react";
+import { MobileMenu } from "@/components/mobile-menu";
 
 const areas = [
   {
@@ -79,6 +80,8 @@ export default function Home() {
           <a href="#trayectoria">Trayectoria</a>
           <a href="#contacto">Contacto</a>
         </nav>
+
+        <MobileMenu />
 
         <a className="header-cta" href="mailto:usabiowater@gmail.com?subject=Solicitud%20de%20consulta">
           Solicitar consulta <ArrowRight size={16} aria-hidden="true" />
