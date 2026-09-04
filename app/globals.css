@@ -60,6 +60,7 @@ button { color: inherit; font: inherit; }
   align-items: center;
   justify-content: space-between;
   color: #fff;
+  background: var(--forest);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   transition: height .35s ease, background .35s ease, backdrop-filter .35s ease;
 }
