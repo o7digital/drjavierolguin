@@ -70,7 +70,7 @@ export default function Home() {
           <a href="#contacto">Contacto</a>
         </nav>
 
-        <a className="header-cta" href="mailto:usabiowater@gmail.com?subject=Solicitud%20de%20consulta">
+        <a className="header-cta" href="#contacto">
           Solicitar consulta
           <ArrowIcon />
         </a>
@@ -111,7 +111,7 @@ export default function Home() {
                 Una mirada clínica completa, humana y preventiva para comprender tu salud y acompañarte con criterio en cada etapa.
               </p>
               <div className="hero-actions">
-                <a className="button button-light" href="mailto:usabiowater@gmail.com?subject=Solicitud%20de%20consulta">
+                <a className="button button-light" href="#contacto">
                   Solicitar información
                   <ArrowIcon />
                 </a>
@@ -298,11 +298,17 @@ export default function Home() {
           <div className="contact-main">
             <p className="kicker kicker-light"><span /> Solicita información</p>
             <h2 id="contact-title" className="reveal">Tu salud merece tiempo, escucha y una mirada completa.</h2>
-            <a className="contact-email reveal" href="mailto:usabiowater@gmail.com?subject=Solicitud%20de%20consulta">
-              <span>Escríbenos a</span>
-              <strong>usabiowater@gmail.com</strong>
-              <i aria-hidden="true">↗</i>
-            </a>
+            <p className="contact-direct-email">También puedes escribir a usabiowater@gmail.com</p>
+            <form className="contact-form reveal" action="https://formspree.io/f/mdeodkqq" method="POST">
+              <label htmlFor="name">Nombre</label>
+              <input id="name" name="name" type="text" autoComplete="name" placeholder="Tu nombre" required />
+              <label htmlFor="email">Email</label>
+              <input id="email" name="email" type="email" autoComplete="email" placeholder="tu@email.com" required />
+              <label htmlFor="message">Mensaje</label>
+              <textarea id="message" name="message" rows={4} placeholder="¿En qué podemos ayudarte?" required />
+              <input type="hidden" name="_subject" value="Nueva solicitud de consulta" />
+              <button type="submit">Enviar solicitud <ArrowIcon /></button>
+            </form>
           </div>
           <a className="location-card reveal" href="https://www.google.com/maps/search/?api=1&query=4141+Southwest+Freeway+Houston+TX+77027" target="_blank" rel="noreferrer">
             <div className="location-pin" aria-hidden="true">

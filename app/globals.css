@@ -393,10 +393,15 @@ button { color: inherit; font: inherit; }
 .contact::before { content: "JO"; position: absolute; right: -35px; bottom: -140px; color: rgba(255,255,255,.026); font-family: var(--serif); font-size: 390px; letter-spacing: -.1em; line-height: 1; }
 .contact-label { writing-mode: vertical-rl; transform: rotate(180deg); color: rgba(255,255,255,.42); font-size: 9px; letter-spacing: .27em; text-transform: uppercase; }
 .contact h2 { max-width: 740px; font-size: clamp(51px, 5.5vw, 82px); }
-.contact-email { position: relative; margin-top: 48px; padding: 24px 55px 24px 0; display: inline-grid; border-top: 1px solid rgba(255,255,255,.28); border-bottom: 1px solid rgba(255,255,255,.28); }
-.contact-email span { color: var(--mineral); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; }
-.contact-email strong { margin-top: 6px; font-family: var(--serif); font-size: clamp(20px, 2.1vw, 30px); font-weight: 400; }
-.contact-email i { position: absolute; right: 0; top: 50%; color: var(--copper); font-family: var(--serif); font-size: 24px; font-style: normal; transform: translateY(-50%); }
+.contact-direct-email { margin: 24px 0 0; color: var(--mineral); font-size: 13px; }
+.contact-form { max-width: 620px; margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px; }
+.contact-form label { color: var(--mineral); font-size: 9px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.contact-form input:not([type="hidden"]), .contact-form textarea { width: 100%; padding: 14px 15px; border: 1px solid rgba(255,255,255,.28); background: rgba(255,255,255,.07); color: #fff; font: inherit; font-size: 13px; outline: none; }
+.contact-form input:not([type="hidden"]):focus, .contact-form textarea:focus { border-color: var(--mineral); }
+.contact-form textarea { grid-column: 1 / -1; resize: vertical; }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255,255,255,.52); }
+.contact-form button { grid-column: 1 / -1; justify-self: start; display: inline-flex; align-items: center; gap: 16px; margin-top: 8px; padding: 15px 22px; border: 0; background: var(--copper); color: #fff; cursor: pointer; font-size: 11px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+.contact-form button svg { width: 17px; }
 .location-card { position: relative; z-index: 1; min-height: 275px; padding: 42px; display: flex; flex-direction: column; justify-content: flex-end; background: var(--bone); color: var(--ink); transition: transform .25s ease; }
 .location-card:hover { transform: translateY(-5px); }
 .location-pin { position: absolute; top: 37px; left: 40px; display: grid; place-items: center; width: 60px; height: 60px; border: 1px solid var(--line); border-radius: 50%; color: var(--copper); }
@@ -514,8 +519,8 @@ button { color: inherit; font: inherit; }
   .trajectory-card { min-height: 390px; padding: 35px 30px; }
   .signal { top: 48px; left: 31px; transform: scale(.75); transform-origin: left; }
   .contact { padding: 86px 20px; }
-  .contact-email { display: grid; }
-  .contact-email strong { word-break: break-word; }
+  .contact-form { grid-template-columns: 1fr; }
+  .contact-form textarea, .contact-form button { grid-column: 1; }
   .location-card { min-height: 245px; padding: 32px 26px; }
   .location-pin { top: 28px; left: 26px; }
   .location-card > i { right: 27px; bottom: 31px; }
