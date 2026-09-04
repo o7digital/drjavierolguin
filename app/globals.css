@@ -80,10 +80,10 @@ button { color: inherit; font: inherit; }
 }
 .brand-seal span { font-family: var(--serif); font-size: 17px; letter-spacing: -.04em; }
 .brand-name { display: flex; flex-direction: column; gap: 3px; }
-.brand-name strong { font-family: var(--serif); font-size: 18px; font-weight: 500; }
+.brand-name strong { font-family: var(--serif); font-size: 18px; font-weight: 700; }
 .brand-name small { opacity: .62; font-size: 9px; letter-spacing: .18em; text-transform: uppercase; }
 .desktop-nav { display: flex; align-items: center; gap: clamp(22px, 3vw, 43px); }
-.desktop-nav a { position: relative; color: rgba(255, 255, 255, .77); font-size: 13px; }
+.desktop-nav a { position: relative; color: rgba(255, 255, 255, .9); font-size: 13px; font-weight: 700; }
 .desktop-nav a::after {
   content: "";
   position: absolute;
@@ -424,7 +424,7 @@ button { color: inherit; font: inherit; }
   .menu-button[aria-expanded="true"] i:last-of-type { transform: translateY(-3.5px) rotate(-45deg); }
   .mobile-nav { position: absolute; top: 100%; right: 0; left: 0; padding: 20px clamp(24px,5vw,76px) 30px; display: grid; visibility: hidden; opacity: 0; background: rgba(6,21,18,.98); border-top: 1px solid rgba(255,255,255,.12); transform: translateY(-10px); transition: opacity .25s ease, transform .25s ease, visibility .25s ease; }
   .mobile-nav.is-open { visibility: visible; opacity: 1; transform: translateY(0); }
-  .mobile-nav a { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.12); font-family: var(--serif); font-size: 22px; }
+  .mobile-nav a { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.12); font-family: var(--serif); font-size: 22px; font-weight: 700; }
   .mobile-nav a span { margin-right: 14px; color: var(--copper); font-family: var(--sans); font-size: 9px; }
   .doctor-grid { grid-template-columns: .78fr 1.22fr; }
   .doctor-intro { grid-column: 1 / 3; }
